@@ -13,7 +13,6 @@ body {
 }
 
 a {
-    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     color: #1d6b4a;
     text-decoration: none;
 }
@@ -24,14 +23,13 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     background-color: #1d6b4a;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* soal no 4 - ini yang bikin navbar wrap ke bawah pas layar sempit */
+    flex-wrap: wrap; 
 }
 
 header h1 {
@@ -47,6 +45,23 @@ header nav ul {
 header nav a {
     color: #fff;
     font-weight: 500;
+}
+
+header nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+header nav a.active {
+    padding-bottom: 4px;
+    font-weight: 700;
+}
+
+header nav a.active {
+    color: #ffffff;
+    font-weight: 700;
 }
 
 /* ===== Main Layout ===== */
@@ -65,7 +80,6 @@ section {
 }
 
 section h2 {
-    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     color: #1d6b4a;
     margin-bottom: 1rem;
 }
@@ -73,7 +87,6 @@ section h2 {
 /* ===== Kartu Statistik (CSS Grid) ===== */
 main section:nth-of-type(2) {
     display: grid;
-    /* perubahan no 2 - dari repeat(3, 1fr) jadi repeat(4, 1fr) untuk kolom ke-4 */
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
 }
@@ -94,7 +107,6 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     color: #1d6b4a;
 }
 
@@ -111,8 +123,7 @@ th, td {
 }
 
 thead {
-    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
-    background-color: #1d6b4a;
+    background-color: #879a92;
 }
 
 tbody tr:nth-child(even) {
@@ -124,25 +135,22 @@ tbody tr:hover {
 }
 
 td button {
-    padding: 0.35rem 0.7rem;
+    padding: 0.38rem 0.9rem;
     margin-right: 0.35rem;
-    border:#2b2b2b;
-    border-radius: 4px;
+    border: 2px solid #535353;
+    border-radius: 14px;
     cursor: pointer;
     font-size: 0.85rem;
 }
 
-/* perubahan no 3 - ganti dari :first-of-type/:last-of-type (berbasis posisi)
-   ke class (berbasis makna), supaya warna tombol tetap benar
-   walau ditambah tombol Detail di tengah */
 td button.btn-edit {
-    background-color: #f0ad4e;
+    background-color: #337ab7;
     color: #fff;
     
 }
 
 td button.btn-detail {
-    background-color: #5bc0de;
+    background-color: rgb(229, 174, 10);
     color: #fff;
 }
 
@@ -174,7 +182,6 @@ form select {
 }
 
 form button[type="submit"] {
-    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     background-color: #1d6b4a;
     color: #fff;
     border: none;
@@ -186,8 +193,93 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-    /* perubahan no 1 - warna hover disesuaikan (lebih gelap dari #1d6b4a) */
     background-color: #124d33;
+}
+
+/* ===== Hamburger Menu (checkbox hack) ===== */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+}
+
+.nav-toggle-label {
+    display: block;
+}
+
+header nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+header nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* ===== Tabel Responsif ===== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet ke bawah */
+@media (max-width: 768px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    header {
+        position: relative;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
 }
 
 /* ===== Footer ===== */

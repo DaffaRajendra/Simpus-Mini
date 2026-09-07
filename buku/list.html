@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIMPUS-Mini | List Buku</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/bookshelf.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <h1>SIMPUS-Mini</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
         <nav>
             <ul>
                 <li><a href="../index.html">Beranda</a></li>
-                <li><a href="list.html">Daftar Buku</a></li>
+                <li><a href="list.html" class="active">Daftar Buku</a></li>
                 <li><a href="tambah.html">Tambah Buku</a></li>
                 <li><a href="../anggota/list.html">Daftar Anggota</a></li>
                 <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
@@ -31,7 +34,7 @@
                         <th>Pengarang</th>
                         <th>Stok</th>
                         <th>Tahun</th>
-                        <th>Aksi</th>
+                        <th style="padding-left: 90px;">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,9 +44,9 @@
                         <td>4</td>
                         <td>2005</td>
                         <td>
-                            <button type="button" style="background-color: gold; border-radius: 0cap; border-color: black;">Edit</button>
-                            <button type="button">Detail</button>
-                            <button type="button">Hapus</button>
+                            <button type="button" class="btn-edit">Edit</button>
+                            <button type="button" class="btn-detail">Detail</button>
+                            <button type="button" class="btn-hapus">Hapus</button>
                         </td>
                     </tr>
 
@@ -53,9 +56,9 @@
                         <td>2</td>
                         <td>1980</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Detail</button>
-                            <button type="button">Hapus</button>
+                            <button type="button" class="btn-edit">Edit</button>
+                            <button type="button" class="btn-detail">Detail</button>
+                            <button type="button" class="btn-hapus">Hapus</button>
                         </td>
                     </tr>
                     <tr>
@@ -64,9 +67,9 @@
                         <td>0</td>
                         <td>2009</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Detail</button>
-                            <button type="button">Hapus</button>
+                            <button type="button" class="btn-edit">Edit</button>
+                            <button type="button" class="btn-detail">Detail</button>
+                            <button type="button" class="btn-hapus">Hapus</button>
                         </td>
                     </tr>
 
@@ -76,9 +79,9 @@
                         <td>5</td>
                         <td>2018</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Detail</button>
-                            <button type="button">Hapus</button>
+                            <button type="button" class="btn-edit">Edit</button>
+                            <button type="button" class="btn-detail">Detail</button>
+                            <button type="button" class="btn-hapus">Hapus</button>
                         </td>
                     </tr>
                     <tr>
@@ -87,9 +90,9 @@
                         <td>1</td>
                         <td>1982</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Detail</button>
-                            <button type="button">Hapus</button>
+                            <button type="button" class="btn-edit">Edit</button>
+                            <button type="button" class="btn-detail">Detail</button>
+                            <button type="button" class="btn-hapus">Hapus</button>
                         </td>
                     </tr>
                     <tr>
@@ -98,9 +101,9 @@
                         <td>10</td>
                         <td>2006</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Detail</button>
-                            <button type="button">Hapus</button>
+                            <button type="button" class="btn-edit">Edit</button>
+                            <button type="button" class="btn-detail">Detail</button>
+                            <button type="button" class="btn-hapus">Hapus</button>
                         </td>
                     </tr>
                     <tr>
@@ -109,9 +112,9 @@
                         <td>7</td>
                         <td>2002</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Detail</button>
-                            <button type="button">Hapus</button>
+                            <button type="button" class="btn-edit">Edit</button>
+                            <button type="button" class="btn-detail">Detail</button>
+                            <button type="button" class="btn-hapus">Hapus</button>
                         </td>
                     </tr>
                 </tbody>
@@ -121,8 +124,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 3</p>
     </footer>
 </body>
 </html>
-

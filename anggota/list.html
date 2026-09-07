@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIMPUS-Mini | Daftar Anggota</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/bookshelf.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -16,14 +17,17 @@
                 <li><a href="../index.html">Beranda</a></li>
                 <li><a href="../buku/list.html">Daftar Buku</a></li>
                 <li><a href="../buku/tambah.html">Tambah Buku</a></li>
-                <li><a href="list.html">Daftar Anggota</a></li>
+                <li><a href="list.html" class="active">Daftar Anggota</a></li>
                 <li><a href="tambah.html">Tambah Anggota</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <table>
+        <section>
+            <h2>Daftar Anggota</h2>
+        <div class="table-responsive">
+            <table>
             <thead>
                 <tr>
                     <th>No. Anggota</th>
@@ -31,7 +35,7 @@
                     <th>Alamat</th>
                     <th>No. HP</th>
                     <th>Tanggal Bergabung</th>
-                    <th>Aksi</th>
+                    <th style="padding-left: 60px;">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,8 +46,8 @@
                     <td>0812xxxx</td>
                     <td>12 Agustus 2025</td>
                     <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Hapus</button>
+                        <button type="button" class="btn-edit">Edit</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
                     </td>
                 </tr>
                 <tr>
@@ -53,8 +57,8 @@
                     <td>0813xxxx</td>
                     <td>14 Agustus 2025</td>
                     <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Hapus</button>
+                        <button type="button" class="btn-edit">Edit</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
                     </td>
                 </tr>
                 <tr>
@@ -64,8 +68,8 @@
                     <td>0818xxxx</td>
                     <td>15 Agustus 2025</td>
                     <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Hapus</button>
+                        <button type="button" class="btn-edit">Edit</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
                     </td>
                 </tr>
                 <tr>
@@ -75,8 +79,8 @@
                     <td>0813xxxx</td>
                     <td>17 Agustus 2025</td>
                     <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Hapus</button>
+                        <button type="button" class="btn-edit">Edit</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
                     </td>
                 </tr>
                 <tr>
@@ -86,16 +90,18 @@
                     <td>0811xxxx</td>
                     <td>21 Agustus 2025</td>
                     <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Hapus</button>
+                        <button type="button" class="btn-edit">Edit</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
                     </td>
                 </tr>
             </tbody>
         </table>
+        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 3</p>
     </footer>
 </body>
 </html>
