@@ -13,6 +13,7 @@ body {
 }
 
 a {
+    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     color: #1d6b4a;
     text-decoration: none;
 }
@@ -23,13 +24,14 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
+    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     background-color: #1d6b4a;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* soal no 4 - ini yang bikin navbar wrap ke bawah pas layar sempit */
 }
 
 header h1 {
@@ -60,7 +62,7 @@ header nav a.active {
 }
 
 header nav a.active {
-    color: #ffffff;
+    color: #f0ad4e;
     font-weight: 700;
 }
 
@@ -80,16 +82,18 @@ section {
 }
 
 section h2 {
+    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     color: #1d6b4a;
     margin-bottom: 1rem;
 }
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
-main section:nth-of-type(2) {
+/* main section:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+   
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-}
+} */
 
 main section:nth-of-type(2) article {
     background-color: #eef4fa;
@@ -107,6 +111,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
+    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
     color: #1d6b4a;
 }
 
@@ -123,7 +128,8 @@ th, td {
 }
 
 thead {
-    background-color: #879a92;
+    /* perubahan no 1 - ganti #1d5b8a jadi hijau tua */
+    background-color: #1d6b4a;
 }
 
 tbody tr:nth-child(even) {
@@ -135,14 +141,17 @@ tbody tr:hover {
 }
 
 td button {
-    padding: 0.38rem 0.9rem;
+    padding: 0.35rem 0.7rem;
     margin-right: 0.35rem;
-    border: 2px solid #535353;
-    border-radius: 14px;
+    border:#2b2b2b;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 0.85rem;
 }
 
+/* perubahan no 3 - ganti dari :first-of-type/:last-of-type (berbasis posisi)
+   ke class (berbasis makna), supaya warna tombol tetap benar
+   walau ditambah tombol Detail di tengah */
 td button.btn-edit {
     background-color: #337ab7;
     color: #fff;
@@ -150,7 +159,7 @@ td button.btn-edit {
 }
 
 td button.btn-detail {
-    background-color: rgb(229, 174, 10);
+    background-color: gold;
     color: #fff;
 }
 
@@ -182,54 +191,39 @@ form select {
 }
 
 form button[type="submit"] {
-    background-color: #1d6b4a;
+    
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
     border: 2px solid black;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
 }
 
 form button[type="submit"]:hover {
-    background-color: #124d33;
+    /* perubahan no 1 - warna hover disesuaikan (lebih gelap dari #1d6b4a) */
+    background-color: #3644b0;
 }
 
-/* ===== Hamburger Menu (checkbox hack) ===== */
-.nav-toggle {
-    display: none;
-}
+/* ===== Animasi Menu Hamburger (Latihan 2) ===== */
+@media (max-width: 991.98px) {
+    header .navbar-collapse.collapse {
+        display: block;
+        overflow: hidden;
+        max-height: 400px;
+        opacity: 1;
+        visibility: visible;
+        transition: max-height 0.35s ease, opacity 0.25s ease, visibility 0s;
+    }
 
-.nav-toggle-label {
-    display: none;
-    font-size: 1.6rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-header {
-    position: relative;
-}
-
-.nav-toggle-label {
-    display: block;
-}
-
-header nav {
-    display: none;
-    width: 100%;
-    order: 3;
-    margin-top: 1rem;
-}
-
-.nav-toggle:checked ~ nav {
-    display: block;
-}
-
-header nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
+    header .navbar-collapse.collapse:not(.show) {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.35s ease, opacity 0.25s ease, visibility 0s 0.35s;
+    }
 }
 
 /* ===== Tabel Responsif ===== */
@@ -248,30 +242,6 @@ header nav ul {
 
 /* Mobile */
 @media (max-width: 480px) {
-    header {
-        position: relative;
-    }
-
-    .nav-toggle-label {
-        display: block;
-    }
-
-    header nav {
-        display: none;
-        width: 100%;
-        order: 3;
-        margin-top: 1rem;
-    }
-
-    .nav-toggle:checked ~ nav {
-        display: block;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
     main section:nth-of-type(2) {
         grid-template-columns: 1fr;
     }
@@ -281,6 +251,28 @@ header nav ul {
         max-width: 100%;
     }
 }
+
+/* ===== Pesan Error Validasi ===== */
+.error {
+    display: block;
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* ===== Kolom Pencarian ===== */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+}
+
 
 /* ===== Footer ===== */
 footer {
